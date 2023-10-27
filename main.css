@@ -1,0 +1,134 @@
+
+/* Custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500&display=swap');
+
+/* Generic resets */
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: poppins, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #333333;
+}
+
+.background{
+  width: 100%;
+  height:100vh;
+  overflow: hidden;
+}
+
+.hearts {
+  position: relative;
+  margin-top: -60px;
+}
+
+.heart {
+  animation: falling-heart 25s infinite;
+  background-color: red;
+  display: inline-block;
+  height: 50px;
+  margin: 0 10px;
+  position: relative;
+  top: 0;
+  transform: rotate(-45deg);
+  position: absolute; 
+  left: 45%; top: 45%;
+  width: 50px;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 50px;
+  position: absolute;
+  width: 50px;
+}
+
+.heart:before {
+  top: -25px;
+  left: 0;
+}
+
+.heart:after {
+  left: 25px;
+  top: 0;
+}
+
+.hearts .heart:nth-child(1){
+  left: 25%;
+  animation-delay: 0s;
+  transform: scale(.5);
+}
+
+.hearts .heart:nth-child(2){
+  left: 10%;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.hearts .heart:nth-child(3){
+  left: 70%;
+  animation-delay: 4s;
+}
+
+.hearts .heart:nth-child(4){
+  left: 40%;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.hearts .heart:nth-child(5){
+  left: 65%;
+  animation-delay: 0s;
+}
+
+.hearts .heart:nth-child(6){
+  left: 75%;
+  animation-delay: 3s;
+}
+
+.hearts .heart:nth-child(7){
+  left: 35%;
+  animation-delay: 7s;
+}
+
+.hearts .heart:nth-child(8){
+  left: 50%;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.hearts .heart:nth-child(9){
+  left: 20%;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.hearts .heart:nth-child(10){
+  left: 85%;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes falling-heart {
+  0%{
+      transform: translateY(0) rotate(0deg) scale(1);
+      opacity: 0;
+  }
+  40%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 0;
+    /* transform: scale(1); */
+  }
+  100%{
+      transform: translateY(1000px) rotate(720deg) scale(0.5);
+      opacity: 0;
+  }
+}
